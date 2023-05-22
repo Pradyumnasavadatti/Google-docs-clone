@@ -1,38 +1,61 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
 .App {
-  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgb(249, 251, 253);
+  font-family: "Rubik", sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: bold;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Main {
+  display: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.btnHover {
+  margin-left: 0.5vw;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0.5vmax;
 }
-
-.App-link {
-  color: #61dafb;
+.btnHover:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.boxShadow:hover {
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+.ql-editor {
+  width: 8in;
+  height: 11in;
+  padding: 1in;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.ql-editor:focus {
+  outline: 1px solid rgba(0, 0, 0, 0);
+}
+.editorContainer::-webkit-scrollbar {
+  width: 7px;
+  background-color: transparent;
+}
+.editorContainer::-webkit-scrollbar-thumb {
+  border-radius: 15vmax;
+  background-color: lightgray;
+}
+@keyframes goBigAnimation {
+  0% {
+    transform: scale(1);
+    display: block;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: scale(50);
+    background-color: rgba(0, 0, 0, 0);
   }
 }
